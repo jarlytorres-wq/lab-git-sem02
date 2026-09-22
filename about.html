@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de Tecsup - Innovación y Eduación Tecnológica</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tecsup: {
+                            blue: '#003366',
+                            accent: '#00A8E8',
+                            dark: '#0A192F',
+                            light: '#F0F4F8',
+                            gold: '#FFB800'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.95) 0%, rgba(10, 25, 47, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 cursor-pointer">
+                    <div class="w-10 h-10 bg-tecsup-blue rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        T
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-tecsup-blue">TECSUP</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 font-medium text-sm text-gray-600">
+                    <a href="#historia" class="hover:text-tecsup-accent transition-colors py-2">Historia</a>
+                    <a href="#mision-vision" class="hover:text-tecsup-accent transition-colors py-2">Misión y Visión</a>
+                    <a href="#estadisticas" class="hover:text-tecsup-accent transition-colors py-2">Impacto</a>
+                    <a href="#carreras" class="hover:text-tecsup-accent transition-colors py-2">Áreas Académicas</a>
+                    <a href="#valores" class="hover:text-tecsup-accent transition-colors py-2">Valores</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contacto" class="bg-tecsup-accent hover:bg-sky-500 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Contáctanos
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-tecsup-blue focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#historia" class="block py-2 text-gray-600 hover:text-tecsup-blue font-medium">Historia</a>
+            <a href="#mision-vision" class="block py-2 text-gray-600 hover:text-tecsup-blue font-medium">Misión y Visión</a>
+            <a href="#estadisticas" class="block py-2 text-gray-600 hover:text-tecsup-blue font-medium">Impacto</a>
+            <a href="#carreras" class="block py-2 text-gray-600 hover:text-tecsup-blue font-medium">Áreas Académicas</a>
+            <a href="#valores" class="block py-2 text-gray-600 hover:text-tecsup-blue font-medium">Valores</a>
+            <a href="#contacto" class="block py-2 text-tecsup-accent font-semibold">Contáctanos</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-24 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1.5 bg-tecsup-accent/20 border border-tecsup-accent/40 rounded-full text-tecsup-accent font-semibold text-xs tracking-wider uppercase mb-6">
+                    Educación Superior de Excelencia
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    Líderes en Innovación y Tecnología Aplicada
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-200 mb-8 font-light leading-relaxed">
+                    Desde 1984, Tecsup forma profesionales altamente cualificados e impulsa el desarrollo tecnológico e industrial del Perú con estándares de clase mundial.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#mision-vision" class="bg-tecsup-accent hover:bg-sky-500 text-white font-semibold px-7 py-3.5 rounded-lg text-center shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Conoce más sobre nosotros
+                    </a>
+                    <a href="#estadisticas" class="border border-white/30 hover:bg-white/10 text-white font-semibold px-7 py-3.5 rounded-lg text-center transition-all">
+                        Ver logros e impacto
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / History Section -->
+    <section id="historia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-tecsup-accent font-bold text-sm tracking-wide uppercase">
+                        <span class="w-8 h-0.5 bg-tecsup-accent"></span>
+                        <span>Nuestra Trayectoria</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-tecsup-blue leading-tight">
+                        Transformando vidas a través de la tecnología y la práctica
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Tecsup</strong> es una organización educativa privada sin fines de lucro, creada con la misión de ofrecer formación técnica aplicada de alto nivel en ingeniería y tecnología. Con campus estratégicamente ubicados en Lima, Arequipa y Trujillo, abarcamos las principales regiones productivas del país.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nuestro modelo educativo práctico y enfocado en proyectos permite a nuestros estudiantes dominar herramientas de última generación en laboratorios equipados con tecnología industrial real, garantizando una rápida inserción laboral.
+                    </p>
+                    <div class="pt-2 grid grid-cols-2 gap-4">
+                        <div class="border-l-4 border-tecsup-accent pl-4">
+                            <h4 class="font-bold text-tecsup-blue text-lg">+40 Años</h4>
+                            <p class="text-xs text-gray-500">De experiencia educativa constante</p>
+                        </div>
+                        <div class="border-l-4 border-tecsup-accent pl-4">
+                            <h4 class="font-bold text-tecsup-blue text-lg">Modelo Dual</h4>
+                            <p class="text-xs text-gray-500">Aprendizaje teórico-práctico intensivo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Estudiantes Tecsup" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-tecsup-blue text-white p-6 rounded-xl shadow-xl hidden sm:block max-w-xs">
+                        <i class="fa-solid fa-award text-tecsup-gold text-3xl mb-2"></i>
+                        <p class="font-semibold text-sm">Acreditación Internacional</p>
+                        <p class="text-xs text-gray-300 mt-1">Garantía de calidad institucional en todos nuestros procesos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics Banner -->
+    <section id="estadisticas" class="py-16 bg-tecsup-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-tecsup-accent mb-2">1984</div>
+                    <p class="text-sm text-gray-300 font-medium">Año de Fundación</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-tecsup-accent mb-2">+90%</div>
+                    <p class="text-sm text-gray-300 font-medium">Empleabilidad Egresados</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-tecsup-accent mb-2">3</div>
+                    <p class="text-sm text-gray-300 font-medium">Sedes Principales (Lima, Arequipa, Trujillo)</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-extrabold text-tecsup-accent mb-2">+35k</div>
+                    <p class="text-sm text-gray-300 font-medium">Egresados Profesionales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mision-vision" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-tecsup-blue mb-4">Nuestro Propósito Institucional</h2>
+                <p class="text-gray-600">Guiamos nuestras acciones diarias para capacitar a las personas en tecnología y transformar empresas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Misión -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-tecsup-accent/10 rounded-bl-full transition-all group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-tecsup-blue/10 text-tecsup-blue rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-tecsup-blue mb-4">Misión</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Desarrollar personas y empresas a través de la educación en tecnología, mediante una formación innovadora, aplicable y orientada a los retos reales de la industria.
+                    </p>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-tecsup-accent/10 rounded-bl-full transition-all group-hover:scale-110"></div>
+                    <div class="w-14 h-14 bg-tecsup-blue/10 text-tecsup-blue rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-tecsup-blue mb-4">Visión</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Ser referentes globales en educación superior tecnológica aplicada, liderando la transformación digital y el desarrollo sostenible en la región.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Divisions -->
+    <section id="carreras" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-tecsup-accent font-bold text-sm tracking-wide uppercase">Oferta Académica</span>
+                <h2 class="text-3xl font-bold text-tecsup-blue mt-2">Áreas de Especialización Tecsup</h2>
+                <p class="text-gray-600 mt-2">Diseñadas estratégicamente para responder a las demandas del mercado tecnológico actual.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-tecsup-accent transition-all group">
+                    <div class="w-12 h-12 bg-tecsup-accent text-white rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-tecsup-blue mb-2">Tecnologías Digitales</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Desarrollo de Software, Redes, Ciberseguridad, Inteligencia Artificial y Big Data para la era digital.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-tecsup-accent transition-all group">
+                    <div class="w-12 h-12 bg-tecsup-accent text-white rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-tecsup-blue mb-2">Mantenimiento y Maquinaria</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Mantenimiento Mecánico, Equipo Pesado, Aviónica y gestión integral de plantas industriales.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-tecsup-accent transition-all group">
+                    <div class="w-12 h-12 bg-tecsup-accent text-white rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-tecsup-blue mb-2">Electricidad y Automatización</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Electrotecnia industrial, Mecatrónica, Control de Procesos e Instrumentación de vanguardia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="valores" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-tecsup-blue mb-4">Nuestros Valores Principales</h2>
+                <p class="text-gray-600">Principios que fundamentan la excelencia Tecsup.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-12 h-12 bg-tecsup-blue/10 text-tecsup-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4 class="font-bold text-tecsup-blue mb-2">Innovación</h4>
+                    <p class="text-xs text-gray-500">Búsqueda continua de mejores formas de aprender y enseñar.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-12 h-12 bg-tecsup-blue/10 text-tecsup-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4 class="font-bold text-tecsup-blue mb-2">Excelencia</h4>
+                    <p class="text-xs text-gray-500">Altos estándares académicos en cada uno de nuestros programas.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-12 h-12 bg-tecsup-blue/10 text-tecsup-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4 class="font-bold text-tecsup-blue mb-2">Integridad</h4>
+                    <p class="text-xs text-gray-500">Compromiso ético, honestidad y responsabilidad social.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="w-12 h-12 bg-tecsup-blue/10 text-tecsup-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h4 class="font-bold text-tecsup-blue mb-2">Trabajo en Equipo</h4>
+                    <p class="text-xs text-gray-500">Colaboración interdisciplinaria para el logro de objetivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-tecsup-dark text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-tecsup-accent rounded flex items-center justify-center font-bold text-white">T</div>
+                        <span class="text-xl font-bold tracking-tight">TECSUP</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Instituto de Educación Superior líder en formación tecnológica aplicada.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Campus</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Campus Lima - Santa Anita</li>
+                        <li>Campus Arequipa - JL Bustamante</li>
+                        <li>Campus Trujillo - Victor Larco</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Enlaces Rápido</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#historia" class="hover:text-tecsup-accent transition-colors">Historia</a></li>
+                        <li><a href="#mision-vision" class="hover:text-tecsup-accent transition-colors">Misión</a></li>
+                        <li><a href="#carreras" class="hover:text-tecsup-accent transition-colors">Carreras</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-200">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-tecsup-accent rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-tecsup-accent rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-gray-800 hover:bg-tecsup-accent rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2026 Tecsup. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
